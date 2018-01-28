@@ -1,0 +1,221 @@
+{
+  "name": "root",
+  "components": {
+    "Camera2D": {
+      "zoomOut": 2048,
+      "zoomMode": "keep-aspect"
+    }
+  },
+  "children": [
+    {
+      "name": "tv",
+      "transform": {
+        "position": [-300, 350]
+      },
+      "components": {
+        "Sprite": {
+          "shader": "shaders/sprite-transparent.json",
+          "overrideBaseTexture": "images/tv.png",
+          "width": -1,
+          "height": -1,
+          "xOrigin": 0.5,
+          "yOrigin": 0.5
+        }
+      }
+    },
+    {
+      "name": "guys",
+      "transform": {
+        "position": [200, 500]
+      },
+      "components": {
+        "Sprite": {
+          "shader": "shaders/sprite-transparent.json",
+          "overrideBaseTexture": "images/happy.png",
+          "width": -1,
+          "height": -1,
+          "xOrigin": 0.5,
+          "yOrigin": 0.5
+        }
+      }
+    },
+    {
+      "name": "couch",
+      "transform": {
+        "position": [200, 800]
+      },
+      "components": {
+        "Sprite": {
+          "shader": "shaders/sprite-transparent.json",
+          "overrideBaseTexture": "images/couch.png",
+          "width": -1,
+          "height": -1,
+          "xOrigin": 0.5,
+          "yOrigin": 0.5
+        }
+      }
+    },
+    {
+      "name": "guy",
+      "transform": {
+        "position": [0, -600]
+      },
+      "components": {
+        "Sprite": {
+          "shader": "shaders/sprite-transparent.json",
+          "overrideBaseTexture": "images/roof.png",
+          "width": -1,
+          "height": -1,
+          "xOrigin": 0.5,
+          "yOrigin": 0.5
+        }
+      }
+    },
+    {
+      "name": "antena",
+      "transform": {
+        "position": [0, -780]
+      },
+      "components": {
+        "InputHandler": {},
+        "Sprite": {
+          "shader": "shaders/sprite-transparent.json",
+          "overrideBaseTexture": "images/antena.png",
+          "width": -1,
+          "height": -1,
+          "xOrigin": 1,
+          "yOrigin": 0.6
+        },
+        "AntenaController": {}
+      }
+    },
+    {
+      "name": "borders",
+      "transform": {
+        "position": [0, 0]
+      },
+      "components": {
+        "Sprite": {
+          "shader": "shaders/sprite-transparent.json",
+          "overrideBaseTexture": "images/border.png",
+          "width": -1,
+          "height": -1,
+          "xOrigin": 0.5,
+          "yOrigin": 0.5
+        }
+      }
+    },
+    {
+      "name": "timer",
+      "active": true,
+      "transform": {
+        "position": [-700, -268]
+      },
+      "components": {
+        "Sprite": {
+          "shader": "shaders/sprite-transparent.json",
+          "overrideBaseTexture": "images/timer-background.png",
+          "width": -1,
+          "height": -1,
+          "xOrigin": 0,
+          "yOrigin": 0
+        }
+      },
+      "children": [
+        {
+          "name": "progress",
+          "transform": {
+            "position": [140, 115]
+          },
+          "components": {
+            "Sprite": {
+              "shader": "shaders/sprite-transparent.json",
+              "overrideBaseTexture": "images/timer-progress.png",
+              "width": -1,
+              "height": -1,
+              "xOrigin": 0,
+              "yOrigin": 0
+            }
+          }
+        },
+        {
+          "name": "foreground",
+          "components": {
+            "Sprite": {
+              "shader": "shaders/sprite-transparent.json",
+              "overrideBaseTexture": "images/timer-foreground.png",
+              "width": -1,
+              "height": -1,
+              "xOrigin": 0,
+              "yOrigin": 0,
+              "xOffset": -10,
+              "yOffset": -5
+            }
+          }
+        },
+        {
+          "name": "goal",
+          "transform": {
+            "scale": 2,
+            "position": [300, 52]
+          },
+          "components": {
+            "TextRenderer": {
+              "shader": "shaders/text-outline-transparent.json",
+              "font": "fonts/verdana.fnt",
+              "halign": "center",
+              "valign": "middle",
+              "color": [0, 0, 0, 1],
+              "colorOutline": [1, 1, 1, 1],
+              "text": "00:30"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "you-won",
+      "active": false,
+      "components": {
+        "RectangleRenderer": {
+          "shader": "shaders/color-transparent.json",
+          "color": "#000000A0",
+          "width": 10000,
+          "height": 10000,
+          "xOrigin": 0.5,
+          "yOrigin": 0.5
+        },
+        "Sprite": {
+          "shader": "shaders/sprite-transparent.json",
+          "overrideBaseTexture": "images/you-won.png",
+          "width": -1,
+          "height": -1,
+          "xOrigin": 0.5,
+          "yOrigin": 0.5
+        }
+      }
+    },
+    {
+      "name": "game-over",
+      "active": false,
+      "components": {
+        "RectangleRenderer": {
+          "shader": "shaders/color-transparent.json",
+          "color": "#000000A0",
+          "width": 10000,
+          "height": 10000,
+          "xOrigin": 0.5,
+          "yOrigin": 0.5
+        },
+        "Sprite": {
+          "shader": "shaders/sprite-transparent.json",
+          "overrideBaseTexture": "images/game-over.png",
+          "width": -1,
+          "height": -1,
+          "xOrigin": 0.5,
+          "yOrigin": 0.5
+        }
+      }
+    }
+  ]
+}

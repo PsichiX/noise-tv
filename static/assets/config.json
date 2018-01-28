@@ -1,0 +1,33 @@
+{
+  "assets": [
+    "shader://shaders/sprite-transparent.json",
+    "shader://shaders/color-transparent.json",
+    "shader://shaders/text-outline-transparent.json",
+    "image://images/angry.png",
+    "image://images/antena.png",
+    "image://images/border.png",
+    "image://images/cloud1.png",
+    "image://images/cloud2.png",
+    "image://images/cloud3.png",
+    "image://images/couch.png",
+    "image://images/happy.png",
+    "image://images/no_signal.png",
+    "image://images/roof.png",
+    "image://images/tv.png",
+    "image://images/timer-background.png",
+    "image://images/timer-progress.png",
+    "image://images/timer-foreground.png",
+    "image://images/game-over.png",
+    "image://images/you-won.png",
+    "font://fonts/verdana.fnt",
+    "scene://scenes/game.json"
+  ],
+  "input": {
+    "axes": {
+      "level": {
+        "mouse": "x",
+        "gamepadAxis": "primary-x"
+      }
+    }
+  }
+}
